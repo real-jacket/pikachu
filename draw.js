@@ -9,20 +9,23 @@
                 let a = $(e.currentTarget)
                 a.siblings().removeClass('active')
                 a.addClass('active')
+                console.log(a.attr('class'))
                 switch (a.attr('class')) {
-                    case 'slow':
+                    case 'slow active':
                         time = 100;
                         break;
-                    case 'normal':
+                    case 'normal active':
                         time = 50;
                         break;
-                    case 'fast':
-                        time = 20;
+                    case 'fast active':
+                        time = 10;
                         break;
                 }
+                console.log(time)
             })
             
         }
+        console.log(time)
         let n = 0;
         let id = setTimeout(function adjust(){
             n += 1; 
